@@ -3,14 +3,16 @@ require 'appium_lib'
 
 def sauce_capabilities
   {
-      'app' => 'sauce-storage:PlainNote.zip',
-      'device' => 'iPhone 6',
+      'appium-version' => '1.3.7',
+      #'app' => 'sauce-storage:PlainNote.zip',
+      'app' => 'http://appium.s3.amazonaws.com/TestApp7.1.app.zip',
+      'device' => 'iPhone Simulator',
       'username' => 'willydelacruzef',
       'access-key' => '53e674f7-6a0a-4f99-ad23-65b7412fe1a6',
       'platform' => 'iOS',
-      'version' => '9.3',
+      'version' => '8.0',
       'name' => 'walle-saucelabs-cucumber-appium',
-      'passed' => 'true'
+      'passed' => 'true',
   }
 end
 
@@ -42,18 +44,22 @@ def ios_hybrid_local_capabilities
   }
 end
 
-Before do
-  case ENV['TYPE']
-    when 'hybrid'
-      @driver = Appium::Driver.new(ios_hybrid_local_capabilities)
-    when 'native'
-      @driver = Appium::Driver.new(ios_native_local_capabilities)
-  end
 
-  @driver.start_driver
+Before do
+  # case ENV['TYPE']
+  # when 'hybrid'
+  #   @appium = Appium::Driver.new(ios_hybrid_local_capabilities)
+  # when 'native'
+  #@appium = Appium::Driver.new(sauce_capabilities)
+  # else
+  @appium = Selenium::WebDriver.for(:remote, :desired_capabilities => sauce_capabilities, :url => sauce_url)
+  puts 's'
+  # end
+
+  @appium.start_driver
 end
 
 
 After do
-  @driver.driver_quit
+  @appium.driver_quit
 end
