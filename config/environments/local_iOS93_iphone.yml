@@ -1,0 +1,4 @@
+app_path: 'http://appium.s3.amazonaws.com/TestApp7.1.app.zip'
+platform_name: 'iOS'
+platform_version: '9.3'
+device_name: 'iPhone 6'

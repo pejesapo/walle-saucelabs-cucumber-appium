@@ -1,1 +1,6 @@
-default: --no-source --color --format pretty
+#default: --no-source --color --format pretty
+default: FIG_NEWTON_FILE=local_iOS93_iphone.yml target=local --format html --out report/default_report.html --format pretty
+local_iOS93_iphone: FIG_NEWTON_FILE=local_iOS93_iphone.yml target=local --format html --out report/default_report.html --format pretty
+sauce_iOS80_iphone: FIG_NEWTON_FILE=sauce_iOS80_iphone.yml target=sauce --format html --out report/default_report.html --format pretty
+sauce_iOS90_iphone: FIG_NEWTON_FILE=sauce_iOS90_iphone.yml target=sauce --format html --out report/default_report.html --format pretty
+sauce_android44_emulator: FIG_NEWTON_FILE=sauce_android44_emulator.yml target=sauce --format html --out report/default_report.html --format pretty
