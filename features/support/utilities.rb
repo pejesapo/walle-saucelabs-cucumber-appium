@@ -39,7 +39,11 @@ module Utilities
             deviceName: @device_descriptor['device_name'],
             app: FigNewton.walle_app_path,
             name: scenario_name,
-        }
+        },
+        appium_lib:
+            {
+                server_url: 'http://127.0.0.1:4723/wd/hub'
+            }
     }
   end
 
