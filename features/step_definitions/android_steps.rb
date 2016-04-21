@@ -1,6 +1,6 @@
 When(/^I attempt to create a new note with text: "([^"]*)"$/) do |text|
   @appium.find('New note').click
-  @appium.first_textfield.type(text)
+  @appium.first_textfield.send_keys(text)
 end
 
 And(/^I save it$/) do

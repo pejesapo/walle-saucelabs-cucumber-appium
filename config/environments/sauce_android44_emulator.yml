@@ -1,7 +1,0 @@
-app_path: 'http://appium.s3.amazonaws.com/NotesList.apk'
-sauce_username: 'willydelacruzef'
-sauce_access_key: '53e674f7-6a0a-4f99-ad23-65b7412fe1a6'
-platform_name: 'Android'
-platform_version: '4.4'
-device_name: 'Android Emulator'
-appium_version: '1.3.7'

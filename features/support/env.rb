@@ -1,5 +1,4 @@
 require 'rspec'
-require 'page-object'
 require 'fig_newton'
 require 'faker'
 require 'require_all'
@@ -8,4 +7,4 @@ require 'hashdiff'
 
 require_rel 'pages'
 
-World(PageObject::PageFactory)
+#World(PageObject::PageFactory)

@@ -1,23 +1,26 @@
 require 'appium_lib'
-include AppiumConfig
 
 Before do |scenario|
-  case ENV['target']
+
+  Utilities::load_device_descriptor
+
+  case ENV['TARGET']
     when 'local'
-      @appium = Appium::Driver.new(local_capabilities(scenario.name))
+      capabilities = Utilities.local_capabilities(scenario.name)
     when 'sauce'
-      @appium = Appium::Driver.new(sauce_capabilities(scenario.name))
+      capabilities = Utilities.sauce_capabilities(scenario.name)
     else
-      @appium = Appium::Driver.new(local_capabilities(scenario.name))
+      capabilities = Utilities.local_capabilities(scenario.name)
   end
+
+  @appium = Appium::Driver.new(capabilities)
   Appium.promote_appium_methods RSpec::Core::ExampleGroup
   @appium.start_driver
-
 end
 
 After do |scenario|
-  if ENV['target'] == 'sauce'
-    sauce_update_job_success(!scenario.failed?)
+  if ENV['TARGET'] == 'sauce'
+    Utilities.sauce_update_job_success(@appium,!scenario.failed?)
   end
   @appium.driver_quit
 end
