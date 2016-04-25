@@ -1,4 +1,9 @@
-walle_app_path: 'http://appium.s3.amazonaws.com/TestApp7.1.app.zip'
+#'http://appium.s3.amazonaws.com/TestApp7.1.app.zip'
+#'/Users/stephanydaneri/Documents/workspace/poc_aws_basictest/src/test/resources/apps/ContactManager.apk'
+#'/Users/stephanydaneri/Documents/APPIUM_CONFIG_FILES/WebViewApp7.1.app.zip'
+# Case of Camera, Map (installed on Android): path should be empty
+
+walle_app_path: '/Users/stephanydaneri/Documents/APPIUM_CONFIG_FILES/TestApp7.1.app.zip' #'/Users/stephanydaneri/Documents/workspace/poc_aws_basictest/src/test/resources/apps/ContactManager.apk'
 webview_url:
 width:
 height:
