@@ -1,4 +1,9 @@
-Given(/^I have launched the app$/) do
+When(/^I sum the numbers: "([^"]*)" and "([^"]*)"$/) do |x, y|
+  on(CalculatorScreen).enter_first_value(x)
+  on(CalculatorScreen).enter_second_value(y)
+  on(CalculatorScreen).sum
+  on(CalculatorScreen).open_camera("")
+end
 
   # case ENV['TYPE']
   #   when 'hybrid'
@@ -41,23 +46,23 @@ Given(/^I have launched the app$/) do
   #
   #  sleep 2
   #  2.should be == 1
-end
+  # end
 
 
-When(/^I sum the numbers: "([^"]*)" and "([^"]*)"$/) do |x, y|
-      field_one = @appium.find_element :accessibility_id, "TextField1"
-      field_one.send_keys x.to_i
-
-      field_two = @appium.find_elements(:class_name, "UIATextField")[1]
-      field_two.send_keys y.to_i
-
-      # they should be the same size, and the first should be above the second
-      field_one.location.y.should be < field_two.location.y
-      field_one.size.should eq(field_two.size)
-
-      # trigger computation by using the button
-      @appium.find_element(:accessibility_id, "ComputeSumButton").click
-end
+# When(/^I sum the numbers: "([^"]*)" and "([^"]*)"$/) do |x, y|
+#       field_one = @appium.find_element :accessibility_id, "TextField1"
+#       field_one.send_keys x.to_i
+#
+#       field_two = @appium.find_elements(:class_name, "UIATextField")[1]
+#       field_two.send_keys y.to_i
+#
+#       # they should be the same size, and the first should be above the second
+#       field_one.location.y.should be < field_two.location.y
+#       field_one.size.should eq(field_two.size)
+#
+#       # trigger computation by using the button
+#       @appium.find_element(:accessibility_id, "ComputeSumButton").click
+# end
 
 Then(/^I should get "([^"]*)" as the result$/) do |z|
       # is sum equal?

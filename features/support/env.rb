@@ -5,6 +5,6 @@ require 'require_all'
 require 'data_magic'
 require 'hashdiff'
 
-require_rel 'pages'
+require_rel 'screens'
 
 #World(PageObject::PageFactory)

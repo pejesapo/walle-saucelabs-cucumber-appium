@@ -1,4 +1,4 @@
-module ScreenFactory
+module StepsHelper
   def on(screen)
     screen_object_instance = eval("#{screen.to_s}.instance")
     screen_object_instance.set_driver(@appium)
@@ -7,4 +7,4 @@ module ScreenFactory
 
 end
 
-World(ScreenFactory)
+World(StepsHelper)

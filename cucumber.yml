@@ -1,15 +1,15 @@
 #default: --no-source --color --format pretty
 
 # Profiles for local environment - LOCAL APPIUM SERVER
-default: FIG_NEWTON_FILE=local_env.yml TARGET=local DEVICE=local --format html --out report/default_report.html --format pretty
-local: FIG_NEWTON_FILE=local_env.yml TARGET=local DEVICE=local --format html --out report/default_report.html --format pretty
+default: FIG_NEWTON_FILE=local_env.yml TARGET=local DEVICE=local PLATFORM=ios --format html --out report/default_report.html --format pretty
+local: FIG_NEWTON_FILE=local_env.yml TARGET=local DEVICE=local PLATFORM=ios --format html --out report/default_report.html --format pretty
 
 # Profiles for test environment - SAUCE LABS
-ios80_test: FIG_NEWTON_FILE=test_env.yml TARGET=sauce DEVICE=ios80 --format html --out report/default_report.html --format pretty
-ios90_test: FIG_NEWTON_FILE=test_env.yml TARGET=sauce DEVICE=ios90 --format html --out report/default_report.html --format pretty
-android44_emulator_test: FIG_NEWTON_FILE=test_env.yml target=sauce DEVICE=android44_emulator --format html --out report/default_report.html --format pretty
+ios80_test: FIG_NEWTON_FILE=test_env.yml TARGET=sauce DEVICE=ios80 PLATFORM=ios --format html --out report/default_report.html --format pretty
+ios90_test: FIG_NEWTON_FILE=test_env.yml TARGET=sauce DEVICE=ios90 PLATFORM=ios --format html --out report/default_report.html --format pretty
+android44_emulator_test: FIG_NEWTON_FILE=test_env.yml target=sauce DEVICE=android44_emulator PLATFORM=ios --format html --out report/default_report.html --format pretty
 
 # Profiles for development environment - SAUCE LABS
-ios80_dev: FIG_NEWTON_FILE=dev_env.yml TARGET=sauce DEVICE=ios80 --format html --out report/default_report.html --format pretty
-ios90_dev: FIG_NEWTON_FILE=dev_env.yml TARGET=sauce DEVICE=ios90 --format html --out report/default_report.html --format pretty
-android44_emulator_dev: FIG_NEWTON_FILE=dev_env.yml target=sauce DEVICE=android44_emulator --format html --out report/default_report.html --format pretty
+ios80_dev: FIG_NEWTON_FILE=dev_env.yml TARGET=sauce DEVICE=ios80 PLATFORM=android --format html --out report/default_report.html --format pretty
+ios90_dev: FIG_NEWTON_FILE=dev_env.yml TARGET=sauce DEVICE=ios90 PLATFORM=android --format html --out report/default_report.html --format pretty
+android44_emulator_dev: FIG_NEWTON_FILE=dev_env.yml target=sauce DEVICE=android44_emulator PLATFORM=android --format html --out report/default_report.html --format pretty
