@@ -2,6 +2,7 @@ When(/^I sum the numbers: "([^"]*)" and "([^"]*)"$/) do |x, y|
   on(CalculatorScreen).enter_first_value(x)
   on(CalculatorScreen).enter_second_value(y)
   on(CalculatorScreen).sum
+  on(CalculatorScreen).open_camera("")
 end
 
 Then(/^I should get "([^"]*)" as the result$/) do |z|
