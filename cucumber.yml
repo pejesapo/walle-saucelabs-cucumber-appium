@@ -13,3 +13,4 @@ android44_emulator_test: FIG_NEWTON_FILE=test_env.yml target=sauce DEVICE=androi
 ios80_dev: FIG_NEWTON_FILE=dev_env.yml TARGET=sauce DEVICE=ios80 PLATFORM=android --format html --out report/default_report.html --format pretty
 ios90_dev: FIG_NEWTON_FILE=dev_env.yml TARGET=sauce DEVICE=ios90 PLATFORM=android --format html --out report/default_report.html --format pretty
 android44_emulator_dev: FIG_NEWTON_FILE=dev_env.yml target=sauce DEVICE=android44_emulator PLATFORM=android --format html --out report/default_report.html --format pretty
+androidgalaxys4_emulator: FIG_NEWTON_FILE=test_env.yml TARGET=sauce DEVICE=androidgalaxys4_emulator PLATFORM=android --format html --out report/default_report.html --format pretty

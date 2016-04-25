@@ -5,5 +5,5 @@ Feature: Testing MultiTouchActions
     Then I perform <multitouch_action>
     Examples:
       | multitouch_action |
-      | pinch             |
-      #| zoom              |
+      #| pinch             |
+      | zoom              |

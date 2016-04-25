@@ -12,7 +12,14 @@ Then(/^I perform (.*)$/) do |multitouch_action|
   case multitouch_action
     when "pinch"
       begin
+        sleep 10
         pinch
       end
-    end
+    when "zoom"
+      begin
+        sleep 10
+        zoom
+      end
+  end
+
 end

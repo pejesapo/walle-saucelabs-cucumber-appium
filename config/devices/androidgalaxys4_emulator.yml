@@ -1,0 +1,4 @@
+platform_name: 'Android'
+platform_version: '4.4'
+device_name: 'Samsung Galaxy S4 Emulator'
+appium_version: '1.5.1'

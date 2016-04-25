@@ -1,4 +1,4 @@
-walle_app_path: 'http://appium.s3.amazonaws.com/TestApp7.1.app.zip'
+walle_app_path: 'https://github.com/livingobjects/ionic-hybrid-client-demo/raw/master/dist/android-armv7-debug.apk'
 webview_url:
 width:
 height:
