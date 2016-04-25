@@ -1,6 +1,3 @@
-app_path: 'http://appium.s3.amazonaws.com/TestApp7.1.app.zip'
-sauce_username: 'willydelacruzef'
-sauce_access_key: '53e674f7-6a0a-4f99-ad23-65b7412fe1a6'
 platform_name: 'iOS'
 platform_version: '8.0'
 device_name: 'iPhone Simulator'
